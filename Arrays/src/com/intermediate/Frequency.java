@@ -21,15 +21,15 @@ public class Frequency {
 						count++;
 					}
 				}
-//				System.out.println(arr[i]+"-->"+count);
+				System.out.println(arr[i]+"-->"+count);
 				//duplicate
 //				if(count>1) {
 //					System.out.println(arr[i]);
 //				}
 				//unique
-				if(count==1) {
-					System.out.println(arr[i]);
-				}
+//				if(count==1) {
+//					System.out.println(arr[i]);
+//				}
 			}
 		}
 	}
