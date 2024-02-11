@@ -31,7 +31,7 @@ public class EmployeeDemo {
 		Employee temp=new Employee();
 		for(int i=0;i<emp.length;i++) {
 			for(int j=i+1;j<emp.length;j++) {
-				if(emp[i].getSalary()>emp[j].getSalary()) {
+				if(emp[i].getSalary()<emp[j].getSalary()) {
 					temp=emp[i];
 					emp[i]=emp[j];
 					emp[j]=temp;
@@ -52,7 +52,7 @@ public class EmployeeDemo {
 		
 	}
 	public static void main(String[] args) {
-		Employee[] emp=new Employee[3];
+		Employee[] emp=new Employee[2];
 		
 		for(int i=0;i<emp.length;i++) {
 			emp[i]=new Employee();
@@ -61,7 +61,7 @@ public class EmployeeDemo {
 		
 		displayEmployees(emp);
 		System.out.println("------------------------");
-		sortEmployees(emp);
+//		sortEmployees(emp);
 		displayEmployees(emp);
 		System.out.println("----------------------------");
 		maxSalaryEmployee(emp);

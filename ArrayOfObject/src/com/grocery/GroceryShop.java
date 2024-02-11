@@ -10,13 +10,31 @@ public class GroceryShop {
 			}
 		}
 	}
+	public static void getItemsCommon(Supplier[] sups) {
+		int ct=0;
+		for(int i=0;i<sups.length;i++) {
+			for(int j=i+1;j<sups.length;j++) {
+				for(int k=0;k<sups[i].getItems().length;k++) {
+					if(sups[i].getItems()[k].getIname().equals(sups[j].getItems()[k].getIname())) {
+						System.out.println(sups[i].getSname());
+						System.out.println(sups[j].getSname());
+						
+					}
+					
+				}
+				
+			}
+			ct++;
+		}
+		System.out.println(ct);
+	}
 	public static void main(String[] args) {
 		Supplier[] sups=new Supplier[3];
 		
-		Item[] i1=new Item[3];
+		Item[] i1=new Item[2];
 		i1[0]=new Item(1, "Rice", 35);
 		i1[1]=new Item(2, "Sugar", 30);
-		i1[2]=new Item(3, "Milk", 65);
+//		i1[2]=new Item(3, "Milk", 65);
 		
 		sups[0]=new Supplier(101, "Akash", 90289966, i1);
 		
@@ -32,15 +50,17 @@ public class GroceryShop {
 		
 		sups[2]=new Supplier(102, "Madhuri", 60289978, i3);
 		
-		for(Supplier s:sups) {
-			System.out.println(s.getSid()+" "+s.getSname()+" "+s.getMobile());
-			for(Item i:s.getItems()) {
-				System.out.println(i);
-			}
-			System.out.println("-------------------------------------");
-		}
+//		for(Supplier s:sups) {
+//			System.out.println(s.getSid()+" "+s.getSname()+" "+s.getMobile());
+//			for(Item i:s.getItems()) {
+//				System.out.println(i);
+//			}
+//			System.out.println("-------------------------------------");
+//		}
+//		
+//		System.out.println("-------------------------");
+//		getItems(sups, "Chocolates");
 		
-		System.out.println("-------------------------");
-		getItems(sups, "Chocolates");
+		getItemsCommon(sups);
 	}
 }
