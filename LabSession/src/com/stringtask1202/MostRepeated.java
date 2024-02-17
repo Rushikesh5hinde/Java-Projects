@@ -35,7 +35,9 @@ public class MostRepeated {
 				}
 			}
 		}
-		System.out.println(Arrays.toString(max));
+		for(int i=0;i<index;i++) {
+			System.out.print(max[i]+" ");
+		}
 	}
 	public static void main(String[] args) {
 		
