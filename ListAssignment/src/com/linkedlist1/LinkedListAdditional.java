@@ -86,5 +86,11 @@ public class LinkedListAdditional {
 		
 		System.out.println(l1.containsAll(l2));
 		System.out.println(l1.equals(l2));
+		
+		System.out.println("----------------");
+		
+		//3.	WAP to clone a linked list to another linked list.
+		LinkedList<Integer> l3=(LinkedList<Integer>) l2.clone();
+		System.out.println(l3);
 	}
 }
